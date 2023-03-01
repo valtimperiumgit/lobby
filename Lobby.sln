@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lobby.Models", "Lobby.Model
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lobby.Data", "Lobby.Data\Lobby.Data.csproj", "{3D767CD3-CE47-4C22-959B-497A8216F94E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lobby.Logic", "Lobby.Logic\Lobby.Logic.csproj", "{357F5CE6-3458-4C26-8408-C948FE99E7FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{3D767CD3-CE47-4C22-959B-497A8216F94E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D767CD3-CE47-4C22-959B-497A8216F94E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D767CD3-CE47-4C22-959B-497A8216F94E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{357F5CE6-3458-4C26-8408-C948FE99E7FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{357F5CE6-3458-4C26-8408-C948FE99E7FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{357F5CE6-3458-4C26-8408-C948FE99E7FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{357F5CE6-3458-4C26-8408-C948FE99E7FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
