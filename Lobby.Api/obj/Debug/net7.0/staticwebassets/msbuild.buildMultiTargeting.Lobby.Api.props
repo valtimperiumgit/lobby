@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Lobby.Api.props" />
+</Project>
