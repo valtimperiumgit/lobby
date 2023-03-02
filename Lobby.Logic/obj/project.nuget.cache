@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "A1aObf1qz16xc6O/pUf+SBxq0rPeaZI/sOM9Ers6J8vekdSXHj1CywJyxBYGrH+3dzVJw78lTFP31RQnx40I2w==",
+  "dgSpecHash": "smnQ3SSt+7afdWcECjCP5BFPv+RNv5zZlPApLMa38yLPiBZR5ki9QGpMO4k6UPj6J0ex0AUUrmPmgxqOFjL/kw==",
   "success": true,
   "projectFilePath": "C:\\Users\\dev\\RiderProjects\\Lobby\\Lobby.Logic\\Lobby.Logic.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\dev\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.0-preview.1.23111.4\\microsoft.entityframeworkcore.8.0.0-preview.1.23111.4.nupkg.sha512",
+    "C:\\Users\\dev\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.0-preview.1.23111.4\\microsoft.entityframeworkcore.abstractions.8.0.0-preview.1.23111.4.nupkg.sha512",
+    "C:\\Users\\dev\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.0-preview.1.23111.4\\microsoft.entityframeworkcore.analyzers.8.0.0-preview.1.23111.4.nupkg.sha512",
+    "C:\\Users\\dev\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0-preview.1.23110.8\\microsoft.extensions.caching.abstractions.8.0.0-preview.1.23110.8.nupkg.sha512",
+    "C:\\Users\\dev\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.0-preview.1.23110.8\\microsoft.extensions.caching.memory.8.0.0-preview.1.23110.8.nupkg.sha512",
+    "C:\\Users\\dev\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0-preview.1.23110.8\\microsoft.extensions.dependencyinjection.8.0.0-preview.1.23110.8.nupkg.sha512",
+    "C:\\Users\\dev\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0-preview.1.23110.8\\microsoft.extensions.dependencyinjection.abstractions.8.0.0-preview.1.23110.8.nupkg.sha512",
+    "C:\\Users\\dev\\.nuget\\packages\\microsoft.extensions.logging\\8.0.0-preview.1.23110.8\\microsoft.extensions.logging.8.0.0-preview.1.23110.8.nupkg.sha512",
+    "C:\\Users\\dev\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0-preview.1.23110.8\\microsoft.extensions.logging.abstractions.8.0.0-preview.1.23110.8.nupkg.sha512",
+    "C:\\Users\\dev\\.nuget\\packages\\microsoft.extensions.options\\8.0.0-preview.1.23110.8\\microsoft.extensions.options.8.0.0-preview.1.23110.8.nupkg.sha512",
+    "C:\\Users\\dev\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0-preview.1.23110.8\\microsoft.extensions.primitives.8.0.0-preview.1.23110.8.nupkg.sha512"
+  ],
   "logs": []
 }

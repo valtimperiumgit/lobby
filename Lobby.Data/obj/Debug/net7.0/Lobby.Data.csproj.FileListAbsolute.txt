@@ -1,0 +1,15 @@
+C:\Users\dev\RiderProjects\Lobby\Lobby.Data\bin\Debug\net7.0\Lobby.Data.deps.json
+C:\Users\dev\RiderProjects\Lobby\Lobby.Data\bin\Debug\net7.0\Lobby.Data.dll
+C:\Users\dev\RiderProjects\Lobby\Lobby.Data\bin\Debug\net7.0\Lobby.Data.pdb
+C:\Users\dev\RiderProjects\Lobby\Lobby.Data\bin\Debug\net7.0\Lobby.Models.dll
+C:\Users\dev\RiderProjects\Lobby\Lobby.Data\bin\Debug\net7.0\Lobby.Models.pdb
+C:\Users\dev\RiderProjects\Lobby\Lobby.Data\obj\Debug\net7.0\Lobby.Data.csproj.AssemblyReference.cache
+C:\Users\dev\RiderProjects\Lobby\Lobby.Data\obj\Debug\net7.0\Lobby.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dev\RiderProjects\Lobby\Lobby.Data\obj\Debug\net7.0\Lobby.Data.AssemblyInfoInputs.cache
+C:\Users\dev\RiderProjects\Lobby\Lobby.Data\obj\Debug\net7.0\Lobby.Data.AssemblyInfo.cs
+C:\Users\dev\RiderProjects\Lobby\Lobby.Data\obj\Debug\net7.0\Lobby.Data.csproj.CoreCompileInputs.cache
+C:\Users\dev\RiderProjects\Lobby\Lobby.Data\obj\Debug\net7.0\Lobby.Data.csproj.CopyComplete
+C:\Users\dev\RiderProjects\Lobby\Lobby.Data\obj\Debug\net7.0\Lobby.Data.dll
+C:\Users\dev\RiderProjects\Lobby\Lobby.Data\obj\Debug\net7.0\refint\Lobby.Data.dll
+C:\Users\dev\RiderProjects\Lobby\Lobby.Data\obj\Debug\net7.0\Lobby.Data.pdb
+C:\Users\dev\RiderProjects\Lobby\Lobby.Data\obj\Debug\net7.0\ref\Lobby.Data.dll

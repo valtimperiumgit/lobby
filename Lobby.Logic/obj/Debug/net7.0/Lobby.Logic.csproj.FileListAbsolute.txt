@@ -1,0 +1,17 @@
+C:\Users\dev\RiderProjects\Lobby\Lobby.Logic\bin\Debug\net7.0\Lobby.Logic.deps.json
+C:\Users\dev\RiderProjects\Lobby\Lobby.Logic\bin\Debug\net7.0\Lobby.Logic.dll
+C:\Users\dev\RiderProjects\Lobby\Lobby.Logic\bin\Debug\net7.0\Lobby.Logic.pdb
+C:\Users\dev\RiderProjects\Lobby\Lobby.Logic\bin\Debug\net7.0\Lobby.Data.dll
+C:\Users\dev\RiderProjects\Lobby\Lobby.Logic\bin\Debug\net7.0\Lobby.Models.dll
+C:\Users\dev\RiderProjects\Lobby\Lobby.Logic\bin\Debug\net7.0\Lobby.Data.pdb
+C:\Users\dev\RiderProjects\Lobby\Lobby.Logic\bin\Debug\net7.0\Lobby.Models.pdb
+C:\Users\dev\RiderProjects\Lobby\Lobby.Logic\obj\Debug\net7.0\Lobby.Logic.csproj.AssemblyReference.cache
+C:\Users\dev\RiderProjects\Lobby\Lobby.Logic\obj\Debug\net7.0\Lobby.Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dev\RiderProjects\Lobby\Lobby.Logic\obj\Debug\net7.0\Lobby.Logic.AssemblyInfoInputs.cache
+C:\Users\dev\RiderProjects\Lobby\Lobby.Logic\obj\Debug\net7.0\Lobby.Logic.AssemblyInfo.cs
+C:\Users\dev\RiderProjects\Lobby\Lobby.Logic\obj\Debug\net7.0\Lobby.Logic.csproj.CoreCompileInputs.cache
+C:\Users\dev\RiderProjects\Lobby\Lobby.Logic\obj\Debug\net7.0\Lobby.Logic.csproj.CopyComplete
+C:\Users\dev\RiderProjects\Lobby\Lobby.Logic\obj\Debug\net7.0\Lobby.Logic.dll
+C:\Users\dev\RiderProjects\Lobby\Lobby.Logic\obj\Debug\net7.0\refint\Lobby.Logic.dll
+C:\Users\dev\RiderProjects\Lobby\Lobby.Logic\obj\Debug\net7.0\Lobby.Logic.pdb
+C:\Users\dev\RiderProjects\Lobby\Lobby.Logic\obj\Debug\net7.0\ref\Lobby.Logic.dll
