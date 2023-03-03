@@ -1,0 +1,12 @@
+C:\Users\dev\RiderProjects\Lobby\Lobby.Extensions\bin\Debug\net7.0\Lobby.Extensions.deps.json
+C:\Users\dev\RiderProjects\Lobby\Lobby.Extensions\bin\Debug\net7.0\Lobby.Extensions.dll
+C:\Users\dev\RiderProjects\Lobby\Lobby.Extensions\bin\Debug\net7.0\Lobby.Extensions.pdb
+C:\Users\dev\RiderProjects\Lobby\Lobby.Extensions\obj\Debug\net7.0\Lobby.Extensions.csproj.AssemblyReference.cache
+C:\Users\dev\RiderProjects\Lobby\Lobby.Extensions\obj\Debug\net7.0\Lobby.Extensions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dev\RiderProjects\Lobby\Lobby.Extensions\obj\Debug\net7.0\Lobby.Extensions.AssemblyInfoInputs.cache
+C:\Users\dev\RiderProjects\Lobby\Lobby.Extensions\obj\Debug\net7.0\Lobby.Extensions.AssemblyInfo.cs
+C:\Users\dev\RiderProjects\Lobby\Lobby.Extensions\obj\Debug\net7.0\Lobby.Extensions.csproj.CoreCompileInputs.cache
+C:\Users\dev\RiderProjects\Lobby\Lobby.Extensions\obj\Debug\net7.0\Lobby.Extensions.dll
+C:\Users\dev\RiderProjects\Lobby\Lobby.Extensions\obj\Debug\net7.0\refint\Lobby.Extensions.dll
+C:\Users\dev\RiderProjects\Lobby\Lobby.Extensions\obj\Debug\net7.0\Lobby.Extensions.pdb
+C:\Users\dev\RiderProjects\Lobby\Lobby.Extensions\obj\Debug\net7.0\ref\Lobby.Extensions.dll

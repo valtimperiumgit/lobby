@@ -1,4 +1,5 @@
-﻿using Lobby.Models.Entities.User;
+﻿using Lobby.Models.Entities.Icon;
+using Lobby.Models.Entities.User;
 using Microsoft.EntityFrameworkCore;
 
 namespace Lobby.Data.EFCore;
@@ -10,4 +11,5 @@ public class MyDbContext : DbContext
     }
 
     public DbSet<User> Users { get; set; }
+    public DbSet<Icon> Icons { get; set; }
 }

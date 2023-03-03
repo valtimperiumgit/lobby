@@ -2,7 +2,7 @@
 
 public class User
 {
-    public User(Guid id, string alias, string email, string password, DateTime created, DateTime lastLogin, bool emailVerificated, string icon)
+    public User(Guid id, string alias, string email, string password, DateTime created, DateTime lastLogin, bool emailVerificated, Guid iconId)
     {
         Id = id;
         Alias = alias;
@@ -11,7 +11,7 @@ public class User
         Created = created;
         LastLogin = lastLogin;
         EmailVerificated = emailVerificated;
-        Icon = icon;
+        IconId = iconId;
     }
 
     public Guid Id { get; set; }
@@ -28,5 +28,5 @@ public class User
     
     public bool EmailVerificated { get; set; }
     
-    public string Icon { get; set; }
+    public Guid IconId { get; set; }
 }

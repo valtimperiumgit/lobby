@@ -4,7 +4,9 @@ using Lobby.Extensions.Utilities;
 using Lobby.Logic.Errors;
 using Lobby.Logic.Interfaces;
 using Lobby.Models.Dto.User;
+using Lobby.Models.Entities.Icon;
 using Lobby.Models.Entities.User;
+using Lobby.Models.Enums;
 
 namespace Lobby.Logic.Services;
 
@@ -12,11 +14,12 @@ public class AuthorizationService : IAuthorizationService
 {
     private readonly IUserRepository _userRepository;
     private readonly IPasswordHasher _passwordHasher;
-    
-    public AuthorizationService(IUserRepository userRepository, IPasswordHasher passwordHasher)
+    private readonly IIconService _iconService;
+    public AuthorizationService(IUserRepository userRepository, IPasswordHasher passwordHasher, IIconService iconService)
     {
         _userRepository = userRepository;
         _passwordHasher = passwordHasher;
+        _iconService = iconService;
     }
     
     public async Task<User> Login(string email, string password)
@@ -35,6 +38,10 @@ public class AuthorizationService : IAuthorizationService
     {
         await ValidateUserCreating(dto);
 
+        List<Icon> commonIcons = await _iconService.GetIconsByRarity(Rarity.Common);
+
+        var randomIcon = commonIcons.OrderBy(icon => icon.Id).ToList()[0];
+        
         User user = new User
         (
             Guid.NewGuid(),
@@ -44,7 +51,7 @@ public class AuthorizationService : IAuthorizationService
             DateTime.Now,
             DateTime.Now, 
             false,
-            "standart"
+            randomIcon.Id
         );
 
         return "token";
