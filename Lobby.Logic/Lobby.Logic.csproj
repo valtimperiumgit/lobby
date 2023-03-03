@@ -8,6 +8,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Lobby.Data\Lobby.Data.csproj" />
+      <ProjectReference Include="..\Lobby.Extensions\Lobby.Extensions.csproj" />
       <ProjectReference Include="..\Lobby.Models\Lobby.Models.csproj" />
     </ItemGroup>
 

@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lobby.Data", "Lobby.Data\Lo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lobby.Logic", "Lobby.Logic\Lobby.Logic.csproj", "{357F5CE6-3458-4C26-8408-C948FE99E7FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lobby.Extensions", "Lobby.Extensions\Lobby.Extensions.csproj", "{86486268-98D7-47B7-9E50-75E865D7EF3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{357F5CE6-3458-4C26-8408-C948FE99E7FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{357F5CE6-3458-4C26-8408-C948FE99E7FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{357F5CE6-3458-4C26-8408-C948FE99E7FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86486268-98D7-47B7-9E50-75E865D7EF3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86486268-98D7-47B7-9E50-75E865D7EF3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86486268-98D7-47B7-9E50-75E865D7EF3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86486268-98D7-47B7-9E50-75E865D7EF3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

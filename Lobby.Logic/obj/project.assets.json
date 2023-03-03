@@ -212,6 +212,16 @@
           "bin/placeholder/Lobby.Data.dll": {}
         }
       },
+      "Lobby.Extensions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Lobby.Extensions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Lobby.Extensions.dll": {}
+        }
+      },
       "Lobby.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -556,6 +566,11 @@
       "path": "../Lobby.Data/Lobby.Data.csproj",
       "msbuildProject": "../Lobby.Data/Lobby.Data.csproj"
     },
+    "Lobby.Extensions/1.0.0": {
+      "type": "project",
+      "path": "../Lobby.Extensions/Lobby.Extensions.csproj",
+      "msbuildProject": "../Lobby.Extensions/Lobby.Extensions.csproj"
+    },
     "Lobby.Models/1.0.0": {
       "type": "project",
       "path": "../Lobby.Models/Lobby.Models.csproj",
@@ -565,6 +580,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Lobby.Data >= 1.0.0",
+      "Lobby.Extensions >= 1.0.0",
       "Lobby.Models >= 1.0.0"
     ]
   },
@@ -602,6 +618,9 @@
           "projectReferences": {
             "C:\\Users\\dev\\RiderProjects\\Lobby\\Lobby.Data\\Lobby.Data.csproj": {
               "projectPath": "C:\\Users\\dev\\RiderProjects\\Lobby\\Lobby.Data\\Lobby.Data.csproj"
+            },
+            "C:\\Users\\dev\\RiderProjects\\Lobby\\Lobby.Extensions\\Lobby.Extensions.csproj": {
+              "projectPath": "C:\\Users\\dev\\RiderProjects\\Lobby\\Lobby.Extensions\\Lobby.Extensions.csproj"
             },
             "C:\\Users\\dev\\RiderProjects\\Lobby\\Lobby.Models\\Lobby.Models.csproj": {
               "projectPath": "C:\\Users\\dev\\RiderProjects\\Lobby\\Lobby.Models\\Lobby.Models.csproj"

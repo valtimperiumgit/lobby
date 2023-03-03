@@ -2,6 +2,18 @@
 
 public class User
 {
+    public User(Guid id, string alias, string email, string password, DateTime created, DateTime lastLogin, bool emailVerificated, string icon)
+    {
+        Id = id;
+        Alias = alias;
+        Email = email;
+        Password = password;
+        Created = created;
+        LastLogin = lastLogin;
+        EmailVerificated = emailVerificated;
+        Icon = icon;
+    }
+
     public Guid Id { get; set; }
     
     public string Alias { get; set; }

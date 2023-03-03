@@ -3921,11 +3921,22 @@
           "bin/placeholder/Lobby.Data.dll": {}
         }
       },
+      "Lobby.Extensions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Lobby.Extensions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Lobby.Extensions.dll": {}
+        }
+      },
       "Lobby.Logic/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Lobby.Data": "1.0.0",
+          "Lobby.Extensions": "1.0.0",
           "Lobby.Models": "1.0.0"
         },
         "compile": {
@@ -11278,6 +11289,11 @@
       "type": "project",
       "path": "../Lobby.Data/Lobby.Data.csproj",
       "msbuildProject": "../Lobby.Data/Lobby.Data.csproj"
+    },
+    "Lobby.Extensions/1.0.0": {
+      "type": "project",
+      "path": "../Lobby.Extensions/Lobby.Extensions.csproj",
+      "msbuildProject": "../Lobby.Extensions/Lobby.Extensions.csproj"
     },
     "Lobby.Logic/1.0.0": {
       "type": "project",
