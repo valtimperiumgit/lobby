@@ -4,6 +4,14 @@ namespace Lobby.Models.Dto.User;
 
 public class UserDto
 {
+    public UserDto(Entities.User.User user)
+    {
+        Id = user.Id;
+        Alias = user.Alias;
+        Email = user.Email;
+        EmailVerificated = user.EmailVerificated;
+    }
+
     public Guid Id { get; set; }
     
     public string Alias { get; set; }

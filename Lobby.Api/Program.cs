@@ -1,4 +1,6 @@
+using Lobby.Api.Options;
 using Lobby.Data.EFCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,10 +22,17 @@ builder
         selector => selector
             .FromAssemblies(
                 Lobby.Data.AssemblyReference.Assembly,
-                Lobby.Logic.AssemblyReference.Assembly)
+                Lobby.Logic.AssemblyReference.Assembly,
+                Lobby.Extensions.AssemblyReference.Assembly)
             .AddClasses(false)
             .AsImplementedInterfaces()
             .WithScopedLifetime());
+
+builder.Services.ConfigureOptions<JwtOptionsSetup>();
+builder.Services.ConfigureOptions<JwtBearerOptionsSetup>();
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer();
 
 var app = builder.Build();
 

@@ -9,6 +9,12 @@ public class ApiError : Exception
         Errors = errors;
     }
 
+    public ApiError()
+    {
+        Code = 500;
+        Message = "Server error";
+    }
+
     public int Code { get; set; }
     
     public string Message { get; set; }

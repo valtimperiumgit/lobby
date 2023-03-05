@@ -6,4 +6,5 @@ namespace Lobby.Logic.Interfaces;
 public interface IIconService
 {
     Task<List<Icon>> GetIconsByRarity(Rarity? rarity);
+    Task<Icon> GetIconById(Guid id);
 }

@@ -10,3 +10,6 @@ C:\Users\dev\RiderProjects\Lobby\Lobby.Extensions\obj\Debug\net7.0\Lobby.Extensi
 C:\Users\dev\RiderProjects\Lobby\Lobby.Extensions\obj\Debug\net7.0\refint\Lobby.Extensions.dll
 C:\Users\dev\RiderProjects\Lobby\Lobby.Extensions\obj\Debug\net7.0\Lobby.Extensions.pdb
 C:\Users\dev\RiderProjects\Lobby\Lobby.Extensions\obj\Debug\net7.0\ref\Lobby.Extensions.dll
+C:\Users\dev\RiderProjects\Lobby\Lobby.Extensions\bin\Debug\net7.0\Lobby.Models.dll
+C:\Users\dev\RiderProjects\Lobby\Lobby.Extensions\bin\Debug\net7.0\Lobby.Models.pdb
+C:\Users\dev\RiderProjects\Lobby\Lobby.Extensions\obj\Debug\net7.0\Lobby.Extensions.csproj.CopyComplete

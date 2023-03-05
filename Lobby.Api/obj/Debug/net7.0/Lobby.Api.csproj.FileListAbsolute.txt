@@ -104,3 +104,6 @@ C:\Users\dev\RiderProjects\Lobby\Lobby.Api\bin\Debug\net7.0\Lobby.Models.dll
 C:\Users\dev\RiderProjects\Lobby\Lobby.Api\bin\Debug\net7.0\Lobby.Data.pdb
 C:\Users\dev\RiderProjects\Lobby\Lobby.Api\bin\Debug\net7.0\Lobby.Logic.pdb
 C:\Users\dev\RiderProjects\Lobby\Lobby.Api\bin\Debug\net7.0\Lobby.Models.pdb
+C:\Users\dev\RiderProjects\Lobby\Lobby.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\dev\RiderProjects\Lobby\Lobby.Api\bin\Debug\net7.0\Lobby.Extensions.dll
+C:\Users\dev\RiderProjects\Lobby\Lobby.Api\bin\Debug\net7.0\Lobby.Extensions.pdb

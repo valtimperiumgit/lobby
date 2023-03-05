@@ -100,7 +100,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\dev\\RiderProjects\\Lobby\\Lobby.Models\\Lobby.Models.csproj": {
+                "projectPath": "C:\\Users\\dev\\RiderProjects\\Lobby\\Lobby.Models\\Lobby.Models.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -112,6 +116,20 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[8.0.0-preview.1.23110.8, )"
+            },
+            "Microsoft.IdentityModel.JsonWebTokens": {
+              "target": "Package",
+              "version": "[6.24.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.24.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

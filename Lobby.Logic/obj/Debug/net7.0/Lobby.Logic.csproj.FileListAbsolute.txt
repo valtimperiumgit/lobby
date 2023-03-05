@@ -15,3 +15,5 @@ C:\Users\dev\RiderProjects\Lobby\Lobby.Logic\obj\Debug\net7.0\Lobby.Logic.dll
 C:\Users\dev\RiderProjects\Lobby\Lobby.Logic\obj\Debug\net7.0\refint\Lobby.Logic.dll
 C:\Users\dev\RiderProjects\Lobby\Lobby.Logic\obj\Debug\net7.0\Lobby.Logic.pdb
 C:\Users\dev\RiderProjects\Lobby\Lobby.Logic\obj\Debug\net7.0\ref\Lobby.Logic.dll
+C:\Users\dev\RiderProjects\Lobby\Lobby.Logic\bin\Debug\net7.0\Lobby.Extensions.dll
+C:\Users\dev\RiderProjects\Lobby\Lobby.Logic\bin\Debug\net7.0\Lobby.Extensions.pdb

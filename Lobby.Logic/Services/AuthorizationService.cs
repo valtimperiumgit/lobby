@@ -3,6 +3,7 @@ using Lobby.Extensions.Interfaces;
 using Lobby.Extensions.Utilities;
 using Lobby.Logic.Errors;
 using Lobby.Logic.Interfaces;
+using Lobby.Models.Dto.Authorization;
 using Lobby.Models.Dto.User;
 using Lobby.Models.Entities.Icon;
 using Lobby.Models.Entities.User;
@@ -12,29 +13,38 @@ namespace Lobby.Logic.Services;
 
 public class AuthorizationService : IAuthorizationService
 {
-    private readonly IUserRepository _userRepository;
+    private readonly IUserService _userLogic;
     private readonly IPasswordHasher _passwordHasher;
     private readonly IIconService _iconService;
-    public AuthorizationService(IUserRepository userRepository, IPasswordHasher passwordHasher, IIconService iconService)
+    private readonly IJwtProvider _jwtProvider;
+    public AuthorizationService( IPasswordHasher passwordHasher, IIconService iconService, IUserService userLogic, IJwtProvider jwtProvider)
     {
-        _userRepository = userRepository;
         _passwordHasher = passwordHasher;
         _iconService = iconService;
+        _userLogic = userLogic;
+        _jwtProvider = jwtProvider;
     }
     
-    public async Task<User> Login(string email, string password)
+    public async Task<AuthorizationResponseDto> Login(string email, string password)
     {
-        var user = await _userRepository.GetUserByEmail(email);
+        var user = await _userLogic.GetUserByEmail(email);
 
         if (user == null || _passwordHasher.Hash(user.Password) != _passwordHasher.Hash(password))
         {
             throw ApiError.NotFound("User with inputed login and password was not found.");
         }
 
-        return user;
+        await _userLogic.UpdateLastLogin(user.Id);
+
+        var token = _jwtProvider.Generate(user);
+
+        var userDto = new UserDto(user);
+        userDto.Icon = _iconService.GetIconById(user.IconId).Result;
+        
+        return new AuthorizationResponseDto(token, userDto);
     }
 
-    public async Task<string> Registration(CreateUserDto dto)
+    public async Task<AuthorizationResponseDto> Registration(CreateUserDto dto)
     {
         await ValidateUserCreating(dto);
 
@@ -54,7 +64,15 @@ public class AuthorizationService : IAuthorizationService
             randomIcon.Id
         );
 
-        return "token";
+        var createdUser = await _userLogic.CreateUser(user);
+        
+        await _userLogic.AddUserIcons(commonIcons.Select(icon => 
+                new UserIcon(createdUser.Id, icon.Id))
+            .ToList());
+    
+        var authResponse = await Login(createdUser.Email, createdUser.Password);
+
+        return authResponse;
     }
 
     public async Task ValidateUserCreating(CreateUserDto dto)
@@ -74,7 +92,7 @@ public class AuthorizationService : IAuthorizationService
             throw ApiError.BadRequest("Alias length must be at least 2 characters.", null);
         }
         
-        var user = await _userRepository.GetUserByEmail(dto.Email);
+        var user = await _userLogic.GetUserByEmail(dto.Email);
 
         if (user != null)
         {

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hs0ZOjhXVo5o/nK7en31YOWaLRY8cTpF+2HrXTeKHwfiKkfnMzSPD6G8X/L4cYs8e5z/t7/AO1gU/vH7YqwwfQ==",
+  "dgSpecHash": "/CDlQN/ZID5EwKT41yb/vc50PVFIawOZ/Ot8GdjfDMPHS/RxomQmZkfLg9iu04YUkYXl2Yay/BDTUC4XWKkVgA==",
   "success": true,
   "projectFilePath": "C:\\Users\\dev\\RiderProjects\\Lobby\\Lobby.Api\\Lobby.Api.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\dev\\.nuget\\packages\\microsoft.aspnet.webapi.core\\5.2.9\\microsoft.aspnet.webapi.core.5.2.9.nupkg.sha512",
     "C:\\Users\\dev\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\dev\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
+    "C:\\Users\\dev\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.3\\microsoft.aspnetcore.authentication.jwtbearer.7.0.3.nupkg.sha512",
     "C:\\Users\\dev\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",
     "C:\\Users\\dev\\.nuget\\packages\\microsoft.aspnetcore.authorization.policy\\2.2.0\\microsoft.aspnetcore.authorization.policy.2.2.0.nupkg.sha512",
     "C:\\Users\\dev\\.nuget\\packages\\microsoft.aspnetcore.hosting.abstractions\\2.2.0\\microsoft.aspnetcore.hosting.abstractions.2.2.0.nupkg.sha512",

@@ -18,4 +18,9 @@ public class IconService : IIconService
     {
         return await _iconRepository.GetIconsByRarity(rarity);
     }
+
+    public async Task<Icon> GetIconById(Guid id)
+    {
+        return await _iconRepository.GetIconById(id);
+    }
 }

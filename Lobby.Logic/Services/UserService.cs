@@ -1,5 +1,6 @@
 ﻿using Lobby.Data.Interfaces;
 using Lobby.Logic.Interfaces;
+using Lobby.Models.Entities.Icon;
 using Lobby.Models.Entities.User;
 
 namespace Lobby.Logic.Services;
@@ -21,5 +22,22 @@ public class UserService : IUserService
     public async Task<User> GetUserByEmail(string email)
     {
         return await _userRepository.GetUserByEmail(email);
+    }
+
+    public async Task<User> CreateUser(User user)
+    {
+        var createdUser = await _userRepository.CreateUser(user);
+
+        return createdUser;
+    }
+
+    public async Task AddUserIcons(List<UserIcon> icons)
+    {
+        await _userRepository.AddUserIcons(icons);
+    }
+
+    public async Task UpdateLastLogin(Guid userId)
+    {
+        await _userRepository.UpdateLastLogin(userId);
     }
 }

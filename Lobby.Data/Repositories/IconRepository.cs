@@ -22,6 +22,11 @@ public class IconRepository : IIconRepository
             return await _dbContext.Icons.AsNoTracking().ToListAsync();
         }
         
-        return await _dbContext.Icons.AsNoTracking().Where(icon => icon.RariryId == (int)rarity).ToListAsync();
+        return await _dbContext.Icons.AsNoTracking().Where(icon => icon.RarityId == (Int16)rarity).ToListAsync();
+    }
+
+    public async Task<Icon> GetIconById(Guid id)
+    {
+        return await _dbContext.Icons.FirstOrDefaultAsync(icon => icon.Id == id);
     }
 }

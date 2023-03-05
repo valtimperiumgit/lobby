@@ -1,4 +1,6 @@
-﻿namespace Lobby.Models.Entities.User;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Lobby.Models.Entities.User;
 
 public class User
 {
@@ -16,10 +18,11 @@ public class User
 
     public Guid Id { get; set; }
     
+    [MaxLength(300)]
     public string Alias { get; set; }
-    
+    [MaxLength(300)]
     public string Email { get; set; }
-    
+    [MaxLength(600)]
     public string Password { get; set; }
     
     public DateTime Created { get; set; }

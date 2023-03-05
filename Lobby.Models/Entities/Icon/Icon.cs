@@ -10,5 +10,5 @@ public class Icon
     
     public string ImageUrl { get; set; }
     
-    public int RariryId { get; set; }
+    public Int16 RarityId { get; set; }
 }
