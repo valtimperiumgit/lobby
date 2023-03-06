@@ -1,8 +1,12 @@
-﻿namespace Lobby.Logic.Errors;
+﻿using System.Net;
+using System.Reflection;
+using System.Text.Json.Serialization;
+
+namespace Lobby.Logic.Errors;
 
 public class ApiError : Exception
 {
-    public ApiError(int code, string message, List<ApiError>? errors)
+    public ApiError(HttpStatusCode code, string message, List<ApiError>? errors)
     {
         Code = code;
         Message = message;
@@ -11,24 +15,27 @@ public class ApiError : Exception
 
     public ApiError()
     {
-        Code = 500;
+        Code = HttpStatusCode.InternalServerError;
         Message = "Server error";
     }
 
-    public int Code { get; set; }
+    public HttpStatusCode Code { get; set; }
     
     public string Message { get; set; }
     
     public List<ApiError>? Errors { get; set; }
+    
+    [JsonIgnore]
+    public MethodBase TargetSite { get; set; }
 
     public static ApiError NotFound(string message)
     {
-        return new ApiError(404, message, null);
+        return new ApiError(HttpStatusCode.NotFound, message, null);
     }
     
     public static ApiError BadRequest(string message, List<ApiError>? errors)
     {
-        return new ApiError(400, message, errors);
+        return new ApiError(HttpStatusCode.BadRequest, message, errors);
     }
 
 }

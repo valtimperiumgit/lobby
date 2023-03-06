@@ -1,3 +1,5 @@
+using Lobby.Api.Middleware;
+using Microsoft.AspNetCore.Builder;
 using Lobby.Api.Options;
 using Lobby.Data.EFCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -36,13 +38,13 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 var app = builder.Build();
 
+app.UseMiddleware<ExceptionHandlingMiddleware>();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-
 
 app.UseHttpsRedirection();
 
