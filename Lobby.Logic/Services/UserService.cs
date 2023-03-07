@@ -1,5 +1,7 @@
 ﻿using Lobby.Data.Interfaces;
+using Lobby.Logic.Errors;
 using Lobby.Logic.Interfaces;
+using Lobby.Models.Dto.User;
 using Lobby.Models.Entities.Icon;
 using Lobby.Models.Entities.User;
 
@@ -39,5 +41,30 @@ public class UserService : IUserService
     public async Task UpdateLastLogin(Guid userId)
     {
         await _userRepository.UpdateLastLogin(userId);
+    }
+    
+    public async Task ValidateUserCreating(CreateUserDto dto)
+    {
+        if (dto.Email.Split('@').Length < 2)
+        {
+            throw ApiError.BadRequest("Invalid email format.", null);
+        }
+
+        if (dto.Password.Length < 4)
+        {
+            throw ApiError.BadRequest("Invalid password.", null);
+        }
+
+        if (dto.Alias.Length < 2)
+        {
+            throw ApiError.BadRequest("Alias length must be at least 2 characters.", null);
+        }
+        
+        var user = await GetUserByEmail(dto.Email);
+
+        if (user != null)
+        {
+            throw ApiError.BadRequest("User with this email already exist.", null);
+        }
     }
 }

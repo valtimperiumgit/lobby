@@ -10,8 +10,6 @@ public interface IAuthorizationService
     Task<AuthorizationResponseDto> Login(string email, string password);
 
     Task<AuthorizationResponseDto> Registration(CreateUserDto user);
-    
-    Task ValidateUserCreating(CreateUserDto user);
 
 
 }

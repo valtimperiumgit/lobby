@@ -1,4 +1,5 @@
-﻿using Lobby.Models.Entities.Icon;
+﻿using Lobby.Models.Dto.User;
+using Lobby.Models.Entities.Icon;
 using Lobby.Models.Entities.User;
 
 namespace Lobby.Logic.Interfaces;
@@ -11,4 +12,6 @@ public interface IUserService
     public Task AddUserIcons(List<UserIcon> icons);
 
     public Task UpdateLastLogin(Guid userId);
+    
+    Task ValidateUserCreating(CreateUserDto user);
 }

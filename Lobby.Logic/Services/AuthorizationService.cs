@@ -1,4 +1,5 @@
-﻿using Lobby.Data.Interfaces;
+﻿using System.Diagnostics.CodeAnalysis;
+using Lobby.Data.Interfaces;
 using Lobby.Extensions.Interfaces;
 using Lobby.Extensions.Utilities;
 using Lobby.Logic.Errors;
@@ -13,28 +14,28 @@ namespace Lobby.Logic.Services;
 
 public class AuthorizationService : IAuthorizationService
 {
-    private readonly IUserService _userLogic;
+    private readonly IUserService _userService;
     private readonly IPasswordHasher _passwordHasher;
     private readonly IIconService _iconService;
     private readonly IJwtProvider _jwtProvider;
-    public AuthorizationService( IPasswordHasher passwordHasher, IIconService iconService, IUserService userLogic, IJwtProvider jwtProvider)
+    public AuthorizationService( IPasswordHasher passwordHasher, IIconService iconService, IUserService userService, IJwtProvider jwtProvider)
     {
         _passwordHasher = passwordHasher;
         _iconService = iconService;
-        _userLogic = userLogic;
+        _userService = userService;
         _jwtProvider = jwtProvider;
     }
     
     public async Task<AuthorizationResponseDto> Login(string email, string password)
     {
-        var user = await _userLogic.GetUserByEmail(email);
+        var user = await _userService.GetUserByEmail(email);
 
-        if (user == null || _passwordHasher.Hash(user.Password) != _passwordHasher.Hash(password))
+        if (user == null || user.Password != _passwordHasher.Hash(password))
         {
             throw ApiError.NotFound("User with inputed login and password was not found.");
         }
 
-        await _userLogic.UpdateLastLogin(user.Id);
+        await _userService.UpdateLastLogin(user.Id);
 
         var token = _jwtProvider.Generate(user);
 
@@ -43,10 +44,10 @@ public class AuthorizationService : IAuthorizationService
         
         return new AuthorizationResponseDto(token, userDto);
     }
-
+    
     public async Task<AuthorizationResponseDto> Registration(CreateUserDto dto)
     {
-        await ValidateUserCreating(dto);
+        await _userService.ValidateUserCreating(dto);
 
         List<Icon> commonIcons = await _iconService.GetIconsByRarity(Rarity.Common);
 
@@ -64,39 +65,12 @@ public class AuthorizationService : IAuthorizationService
             randomIcon.Id
         );
 
-        var createdUser = await _userLogic.CreateUser(user);
+        var createdUser = await _userService.CreateUser(user);
         
-        await _userLogic.AddUserIcons(commonIcons.Select(icon => 
+        await _userService.AddUserIcons(commonIcons.Select(icon => 
                 new UserIcon(createdUser.Id, icon.Id))
             .ToList());
-    
-        var authResponse = await Login(createdUser.Email, createdUser.Password);
 
-        return authResponse;
-    }
-
-    public async Task ValidateUserCreating(CreateUserDto dto)
-    {
-        if (dto.Email.Split('@').Length < 2)
-        {
-            throw ApiError.BadRequest("Invalid email format.", null);
-        }
-
-        if (dto.Password.Length < 4)
-        {
-            throw ApiError.BadRequest("Invalid password.", null);
-        }
-
-        if (dto.Alias.Length < 2)
-        {
-            throw ApiError.BadRequest("Alias length must be at least 2 characters.", null);
-        }
-        
-        var user = await _userLogic.GetUserByEmail(dto.Email);
-
-        if (user != null)
-        {
-            throw ApiError.BadRequest("User with this email already exist.", null);
-        }
+        return await Login(createdUser.Email, createdUser.Password);
     }
 }
