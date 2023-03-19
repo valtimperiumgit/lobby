@@ -6,5 +6,5 @@ public class Key : Item
 {
     public Guid Id { get; set; }
 
-    public Guid IdChest { get; set; }
+    public Guid ChestId { get; set; }
 }

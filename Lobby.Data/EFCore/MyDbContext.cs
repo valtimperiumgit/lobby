@@ -1,5 +1,7 @@
 ﻿using Lobby.Models.Entities.Icon;
+using Lobby.Models.Entities.Transaction;
 using Lobby.Models.Entities.User;
+using Lobby.Models.Enums;
 using Microsoft.EntityFrameworkCore;
 
 namespace Lobby.Data.EFCore;
@@ -21,5 +23,5 @@ public class MyDbContext : DbContext
     public DbSet<Icon> Icons { get; set; }
     public DbSet<UserIcon> UsersIcons { get; set; }
     
-    
+    public DbSet<Transaction> Transactions { get; set; }
 }
