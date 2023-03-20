@@ -51,6 +51,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "HotChocolate.AspNetCore": {
+              "target": "Package",
+              "version": "[14.0.0-preview.9, )"
+            },
+            "HotChocolate.Data": {
+              "target": "Package",
+              "version": "[14.0.0-preview.9, )"
+            },
             "Microsoft.AspNet.WebApi.Core": {
               "target": "Package",
               "version": "[5.2.9, )"

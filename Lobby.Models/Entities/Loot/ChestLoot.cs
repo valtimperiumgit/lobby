@@ -8,7 +8,7 @@ public class ChestLoot
     
     public Guid ChestId { get; set; }
     
-    public TypeOfLoot TypeOfLoot { get; set; }
+    public LootType Type { get; set; }
     
     public decimal BlueEssenceAmount { get; set; }
     

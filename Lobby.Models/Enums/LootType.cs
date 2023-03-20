@@ -1,6 +1,6 @@
 ﻿namespace Lobby.Models.Enums;
 
-public enum TypeOfLoot
+public enum LootType
 {
     Chest = 1,
     Key = 2,

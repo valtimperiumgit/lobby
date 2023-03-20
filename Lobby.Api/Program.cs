@@ -1,3 +1,4 @@
+using Lobby.Api.GraphQL;
 using Lobby.Api.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Lobby.Api.Options;
@@ -17,6 +18,8 @@ string connectionString = configuration.GetConnectionString("Database");
 
 builder.Services.AddDbContext<MyDbContext>(options =>
     options.UseSqlServer(connectionString));
+builder.Services.AddGraphQLServer()
+    .AddQueryType<Queries>();
 
 builder
     .Services
@@ -45,6 +48,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.MapGraphQL();
 
 app.UseHttpsRedirection();
 
