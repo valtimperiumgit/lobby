@@ -1,6 +1,5 @@
 using Lobby.Api.GraphQL;
 using Lobby.Api.Middleware;
-using Microsoft.AspNetCore.Builder;
 using Lobby.Api.Options;
 using Lobby.Data.EFCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -18,8 +17,18 @@ string connectionString = configuration.GetConnectionString("Database");
 
 builder.Services.AddDbContext<MyDbContext>(options =>
     options.UseSqlServer(connectionString));
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    string connection = builder.Configuration.GetConnectionString("Redis");
+    
+    options.Configuration = connection;
+});
+
 builder.Services.AddGraphQLServer()
-    .AddQueryType<Queries>();
+    .AddQueryType<Queries>()
+    .AddMutationType<Mutations>()
+    .AddProjections()
+    .AddFiltering();
 
 builder
     .Services

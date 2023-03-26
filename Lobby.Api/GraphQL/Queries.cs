@@ -5,6 +5,8 @@ namespace Lobby.Api.GraphQL;
 
 public class Queries
 {
+    [UseProjection()]
+    [UseFiltering()]
     public IQueryable<Icon> Icons([Service] MyDbContext context)
     {
         return context.Icons;

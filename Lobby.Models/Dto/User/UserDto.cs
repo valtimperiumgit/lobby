@@ -20,5 +20,5 @@ public class UserDto
 
     public bool EmailVerificated { get; set; }
     
-    public Icon Icon { get; set; }
+    public Entities.Icon.Icon Icon { get; set; }
 }

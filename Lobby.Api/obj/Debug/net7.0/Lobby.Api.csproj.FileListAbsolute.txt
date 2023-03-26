@@ -132,3 +132,6 @@ C:\Users\dev\RiderProjects\Lobby\Lobby.Api\bin\Debug\net7.0\HotChocolate.Utiliti
 C:\Users\dev\RiderProjects\Lobby\Lobby.Api\bin\Debug\net7.0\HotChocolate.Utilities.Introspection.dll
 C:\Users\dev\RiderProjects\Lobby\Lobby.Api\bin\Debug\net7.0\HotChocolate.Validation.dll
 C:\Users\dev\RiderProjects\Lobby\Lobby.Api\bin\Debug\net7.0\Microsoft.Extensions.DiagnosticAdapter.dll
+C:\Users\dev\RiderProjects\Lobby\Lobby.Api\bin\Debug\net7.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\Users\dev\RiderProjects\Lobby\Lobby.Api\bin\Debug\net7.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\dev\RiderProjects\Lobby\Lobby.Api\bin\Debug\net7.0\StackExchange.Redis.dll

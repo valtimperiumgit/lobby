@@ -23,6 +23,7 @@ public class MyDbContext : DbContext
     
 
     public DbSet<User> Users { get; set; }
+    
     public DbSet<Icon> Icons { get; set; }
     public DbSet<UserIcon> UsersIcons { get; set; }
     
